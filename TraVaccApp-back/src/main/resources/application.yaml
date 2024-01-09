@@ -1,0 +1,16 @@
+server:
+  port: 10001
+
+spring:
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  datasource:
+    url: jdbc:mysql://localhost:3306/biomedicine?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: Bilbo83o$
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      validation-query: select 1
+      test-on-borrow: true
