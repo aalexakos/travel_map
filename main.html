@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccinations Advisory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mapdata.js"></script>
+    <script src="worldmap.js"></script>
+  </head>
+  <body>
+    <h1>TraVaccApp</h1>
+
+    <input type="text" id="search-input" placeholder="Search for countries">
+
+    <div id="map"></div>
+
+    <script>
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.trim();
+
+        if (searchTerm) {
+          // Make an AJAX request to the search API endpoint
+          // Replace 'https://your-api-endpoint' with your actual API URL
+          fetch('https://your-api-endpoint/search?q=' + searchTerm)
+            .then(response => response.json())
+            .then(data => {
+              // Update the map with the search results
+              // Extract relevant information from the data (e.g., latitude, longitude, country name)
+              // Create markers on the map using the extracted information
+            });
+        } else {
+          // Clear the map of any search results
+          // Remove existing markers
+        }
+      });
+    </script>
+  </body>
+</html>
